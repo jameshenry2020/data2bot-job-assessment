@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "1d786f5f-0375-4051-bfb7-dd46a816295e",
+		"name": "data2bot-assessment-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10416457"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/v1/users/register/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"henry22@gmail.com\",\r\n    \"first_name\":\"mike\",\r\n    \"last_name\":\"joe\",\r\n    \"password\":\"test4321\",\r\n    \"retype_password\":\"test4321\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register",
+						""
+					]
+				},
+				"description": "an endpoint to register a new user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/users/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "henry22@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test4321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login",
+						""
+					]
+				},
+				"description": "user login with email and password endpoint\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/users/edit-profile/",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYzNzQ0MzEwLCJpYXQiOjE2NjM3NDI1MTAsImp0aSI6IjRlOTI0YWQ3MDAwNTRhYWI4ZTBmMjViNTQ0NDYxZDEwIiwidXNlcl9pZCI6IjZhMjY4N2Q1LWEyN2MtNDZkMS1iY2YwLTY1ZGRkNjNjNjg1ZSJ9.XKg1uxKSC03WSCTz0iCWM7C6wpfEJT4mxhLwLQELdgA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "meachel",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "john",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "Nigeria",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Abuja",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "+2348059261523",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/users/edit-profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"edit-profile",
+						""
+					]
+				},
+				"description": "an endpoint for user to edit their information"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/v1/orders/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYzNzk3NTczLCJpYXQiOjE2NjM3OTU3NzMsImp0aSI6IjU4NGFmZTRmM2QwODQzMjRiN2I3NzQwM2ViZDgzNDI4IiwidXNlcl9pZCI6IjZhMjY4N2Q1LWEyN2MtNDZkMS1iY2YwLTY1ZGRkNjNjNjg1ZSJ9.aRgxb1_okXcB8HPV9VtgB3FA3RzLyCqDyulwlkiwqBc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orders/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						""
+					]
+				},
+				"description": "api endpoint to retrieve list of user orders"
+			},
+			"response": []
+		}
+	]
+}
